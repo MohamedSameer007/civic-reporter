@@ -32,24 +32,30 @@ function Login({ setAdminInfo }) {
 
   const navigate = useNavigate();
 
+  //   const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   if (username && password && state && district && department) {
+  //     const adminData = { username, state, district, department };
+
+  //     // update state
+  //     setAdminInfo(adminData);
+
+  //     // save to localStorage
+  //     localStorage.setItem("adminInfo", JSON.stringify(adminData));
+
+  //     // navigate
+  //     navigate("/");
+  //   } else {
+  //     alert("Please fill all fields");
+  //   }
+  // };
+
   const handleSubmit = (e) => {
-  e.preventDefault();
-
-  if (username && password && state && district && department) {
-    const adminData = { username, state, district, department };
-
-    // update state
-    setAdminInfo(adminData);
-
-    // save to localStorage
-    localStorage.setItem("adminInfo", JSON.stringify(adminData));
-
-    // navigate
-    navigate("/");
-  } else {
-    alert("Please fill all fields");
-  }
-};
+    e.preventDefault(); if (username && password && state && district && department) { // send all info to Dashboard 
+      setAdminInfo({ username, state, district, department }); navigate("/");
+    } else { alert("Please fill all fields"); }
+  };
 
 
   return (

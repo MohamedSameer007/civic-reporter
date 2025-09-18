@@ -1,71 +1,19 @@
-// import React, { useState } from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Login from "./pages/Login";
-// import Dashboard from "./pages/Dashboard";
-// import IssueDetail from "./pages/IssueDetail";
-// import Header from "./components/Header";
-// import Sidebar from "./components/Sidebar";
-// import '@fortawesome/fontawesome-free/css/all.min.css';
-// import { useEffect } from "react";
-
-// function App() {
-//  const [adminInfo, setAdminInfo] = useState(() => {
-//   const saved = localStorage.getItem("adminInfo");
-//   return saved ? JSON.parse(saved) : null;
-// });
-//   const [issues, setIssues] = useState([]); // keep issues at top level
-
-//   useEffect(() => {
-//     if (adminInfo) {
-//       localStorage.setItem("adminInfo", JSON.stringify(adminInfo));
-//     } else {
-//       localStorage.removeItem("adminInfo");
-//     }
-//   }, [adminInfo]);
-
-//   return (
-//     <Router>
-//       <Header adminInfo={adminInfo} setAdminInfo={setAdminInfo} />
-//       <div className="layout d-flex">
-//         <div className="content flex-grow-1">
-//           <Routes>
-//             <Route
-//               path="/login"
-//               element={<Login setAdminInfo={setAdminInfo} />}
-//             />
-//             <Route
-//               path="/"
-//               element={<Dashboard adminInfo={adminInfo} issues={issues} setIssues={setIssues} />}
-//             />
-//             <Route
-//               path="/issue/:id"
-//               element={<IssueDetail issues={issues} />}
-//             />
-//           </Routes>
-//         </div>
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import IssueDetail from "./pages/IssueDetail";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useEffect } from "react";
 
 function App() {
-  const [adminInfo, setAdminInfo] = useState(() => {
-    const saved = localStorage.getItem("adminInfo");
-    return saved ? JSON.parse(saved) : null;
-  });
-
-  const [issues, setIssues] = useState([]);
+ const [adminInfo, setAdminInfo] = useState(() => {
+  const saved = localStorage.getItem("adminInfo");
+  return saved ? JSON.parse(saved) : null;
+});
+  const [issues, setIssues] = useState([]); // keep issues at top level
 
   useEffect(() => {
     if (adminInfo) {
@@ -81,18 +29,18 @@ function App() {
       <div className="layout d-flex">
         <div className="content flex-grow-1">
           <Routes>
-            <Route path="/login" element={<Login setAdminInfo={setAdminInfo} />} />
+            <Route
+              path="/login"
+              element={<Login setAdminInfo={setAdminInfo} />}
+            />
             <Route
               path="/"
-              element={
-                adminInfo ? (
-                  <Dashboard adminInfo={adminInfo} issues={issues} setIssues={setIssues} />
-                ) : (
-                  <Navigate to="/login" replace />
-                )
-              }
+              element={<Dashboard adminInfo={adminInfo} issues={issues} setIssues={setIssues} />}
             />
-            <Route path="/issue/:id" element={<IssueDetail issues={issues} />} />
+            <Route
+              path="/issue/:id"
+              element={<IssueDetail issues={issues} />}
+            />
           </Routes>
         </div>
       </div>
@@ -101,4 +49,56 @@ function App() {
 }
 
 export default App;
+
+// import React, { useState, useEffect } from "react";
+// import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+// import Login from "./pages/Login";
+// import Dashboard from "./pages/Dashboard";
+// import IssueDetail from "./pages/IssueDetail";
+// import Header from "./components/Header";
+// import Sidebar from "./components/Sidebar";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
+
+// function App() {
+//   const [adminInfo, setAdminInfo] = useState(() => {
+//     const saved = localStorage.getItem("adminInfo");
+//     return saved ? JSON.parse(saved) : null;
+//   });
+
+//   const [issues, setIssues] = useState([]);
+
+//   useEffect(() => {
+//     if (adminInfo) {
+//       localStorage.setItem("adminInfo", JSON.stringify(adminInfo));
+//     } else {
+//       localStorage.removeItem("adminInfo");
+//     }
+//   }, [adminInfo]);
+
+//   return (
+//     <Router>
+//       <Header adminInfo={adminInfo} setAdminInfo={setAdminInfo} />
+//       <div className="layout d-flex">
+//         <div className="content flex-grow-1">
+//           <Routes>
+//             <Route path="/login" element={<Login setAdminInfo={setAdminInfo} />} />
+//             <Route
+//               path="/"
+//               element={
+//                 adminInfo ? (
+//                   <Dashboard adminInfo={adminInfo} issues={issues} setIssues={setIssues} />
+//                 ) : (
+//                   <Navigate to="/login" replace />
+//                 )
+//               }
+//             />
+//             <Route path="/issue/:id" element={<IssueDetail issues={issues} />} />
+//           </Routes>
+//         </div>
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;
 
