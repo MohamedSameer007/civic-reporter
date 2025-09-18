@@ -1,0 +1,218 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+DE+VA+Guides&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+}
+/* .issue-detail{
+  background-color: #bdc3c7;
+  width: 100% !important;
+  min-height: 100vh !important;
+}
+/*
+.issue-detail .image-inside{
+  position: absolute;
+  top: 63px;
+  left: 0;
+  width: 100%;
+  height: 125%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+.header{
+  padding: 12px;
+}
+.header img{
+  width: 30px;
+  margin-right: 5px;
+}
+
+
+/* .full-card{
+  border-radius: 600px !important;
+  background-color: green !important;
+}
+.card{
+  background-color: green;
+  border-radius: 20px; 
+} */
+
+
+
+
+.login{
+  width: 100%;
+  min-height: 90.7vh;
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+}
+.login label{
+  font-size: 16px;
+  font-weight:500;
+}
+.login-left{
+  background-color: #34495e;
+  width: 50%;
+  /* background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(./login.png); */
+  background-image: url(./login1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90.5vh;
+}
+.form-full{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 90.5vh;
+  background-image:url(./login3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form-body{
+  border-radius:12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+}
+.login form{
+  border: none !important;
+  /* background: rgba(0,0,0,0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important; */
+  border-radius: 12px !important; /* optional rounded corners */
+  color: rgb(0, 0, 0) !important; /* text color */
+  padding: 40px !important;
+}
+.dashboard{
+  background-color: #cfd5d7;
+  padding: 20px;
+  border-radius: 20px;
+}
+.issue-table-card{
+  background-color: #edf1f2;
+  border-radius: 20px;
+  padding: 10px 0px;
+}
+.issue-detail {
+  position: relative;
+  background-color: #bdc3c7;
+  width: 100% !important;
+  min-height: 100vh !important;
+}
+
+.issue-table-card .table td,
+.table th {
+  padding: 12px 10px; /* vertical | horizontal */
+  vertical-align: middle; /* keeps text centered */
+}
+.issue-table-card .table tr{
+  border: 1px solid black;
+}
+
+.issue-detail .card img{
+  width: 400px;
+}
+
+.issue-detail .image-inside {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/* .issue-detail .image-inside img{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+
+} */
+
+.issue-detail .full-card{
+  width: 490px !important;
+}
+.issue-detail .card{
+  background-color: white;
+  color: black;
+}
+.issue-detail .card p{
+  font-size: 17px;
+  font-weight: 400;
+}
+.issue-detail .card p strong{
+  font-weight: 500;
+  color: #1e272e;
+  font-size: 19px;
+}
+.issue-detail .card i{
+  padding-right: 7px;
+}
+/* Remove outline on focus for all select elements */
+select:focus {
+  outline: none !important;
+  box-shadow: none !important; /* Removes the Bootstrap focus shadow */
+}
+select{
+  outline: none !important;
+  box-shadow: none !important;
+}
+.form-select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.modal-header{
+  background-color: #2c3e50 !important;
+  color: white;
+}
+.modal-footer{
+   background-color: #2c3e50 !important;
+  color: white;
+}
+.modal{
+  width:100%;
+}
+.modal-content{
+}
+.modal-dialog{
+  max-width: 750px !important;
+}
+.close{
+  color: white !important;
+}
+.close:hover{
+  background-color: white !important;
+}
+
+.card-header{
+  background-color: #34495e;
+  color: white;
+}
+.card-footer{
+  background-color: #34495e;
+  color: white;
+}
+
+.card{
+  outline: none !important;
+  border: none !important;
+}
