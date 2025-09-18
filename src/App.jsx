@@ -1,12 +1,12 @@
-// import React, { useState } from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Login from "./pages/Login";
-// import Dashboard from "./pages/Dashboard";
-// import IssueDetail from "./pages/IssueDetail";
-// import Header from "./components/Header";
-// import Sidebar from "./components/Sidebar";
-// import '@fortawesome/fontawesome-free/css/all.min.css';
-// import { useEffect } from "react";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import IssueDetail from "./pages/IssueDetail";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useEffect } from "react";
 
 // function App() {
 //  const [adminInfo, setAdminInfo] = useState(() => {
