@@ -11,6 +11,14 @@ function App() {
   const [adminInfo, setAdminInfo] = useState(null);
   const [issues, setIssues] = useState([]); // keep issues at top level
 
+  useEffect(() => {
+    if (adminInfo) {
+      localStorage.setItem("adminInfo", JSON.stringify(adminInfo));
+    } else {
+      localStorage.removeItem("adminInfo");
+    }
+  }, [adminInfo]);
+
   return (
     <Router>
       <Header adminInfo={adminInfo} setAdminInfo={setAdminInfo} />

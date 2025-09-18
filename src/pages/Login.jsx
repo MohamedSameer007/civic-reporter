@@ -39,6 +39,7 @@ function Login({ setAdminInfo }) {
       // send all info to Dashboard
       setAdminInfo({ username, state, district, department });
       navigate("/");
+      localStorage.setItem("adminInfo", JSON.stringify(adminData))
     } else {
       alert("Please fill all fields");
     }
