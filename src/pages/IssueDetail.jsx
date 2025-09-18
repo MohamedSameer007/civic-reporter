@@ -23,6 +23,7 @@ function IssueDetail({ issues, onUpdateIssue }) {
   }
 
   const handleUpdate = () => {
+    alert("Status updated successfully!");
     if (newStatus) {
       onUpdateIssue(issue.id, { ...issue, status: newStatus });
       alert("Status updated successfully!");
