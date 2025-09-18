@@ -60,7 +60,7 @@ function Login({ setAdminInfo }) {
             {/* Username */}
             <div className="mb-2">
               <label className="form-label">
-                <i className="bi bi-person-fill"></i> Username
+                <i className="bi bi-person-fill"></i> Usernameee
               </label>
               <input
                 type="text"

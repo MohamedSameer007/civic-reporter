@@ -49,7 +49,7 @@
 
 .login{
   width: 100%;
-  min-height: 90.7vh;
+  min-height: 90.9vh;
   /* background-position: center;
   background-size: cover;
   background-repeat: no-repeat; */
@@ -70,14 +70,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90.5vh;
+  height: 90.9vh;
 }
 .form-full{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 90.5vh;
+  height: 90.9vh;
   background-image:url(/login3.png);
   background-position: center;
   background-repeat: no-repeat;
