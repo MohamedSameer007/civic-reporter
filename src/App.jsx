@@ -6,6 +6,7 @@ import IssueDetail from "./pages/IssueDetail";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useEffect } from "react";
 
 function App() {
   const [adminInfo, setAdminInfo] = useState(null);
