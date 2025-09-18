@@ -1,46 +1,46 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import IssueDetail from "./pages/IssueDetail";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import { useEffect } from "react";
+// import React, { useState } from "react";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Login from "./pages/Login";
+// import Dashboard from "./pages/Dashboard";
+// import IssueDetail from "./pages/IssueDetail";
+// import Header from "./components/Header";
+// import Sidebar from "./components/Sidebar";
+// import '@fortawesome/fontawesome-free/css/all.min.css';
+// import { useEffect } from "react";
 
-function App() {
- const [adminInfo, setAdminInfo] = useState(() => {
-  const saved = localStorage.getItem("adminInfo");
-  return saved ? JSON.parse(saved) : null;
-});
-  const [issues, setIssues] = useState([]); // keep issues at top level
+// function App() {
+//  const [adminInfo, setAdminInfo] = useState(() => {
+//   const saved = localStorage.getItem("adminInfo");
+//   return saved ? JSON.parse(saved) : null;
+// });
+//   const [issues, setIssues] = useState([]); // keep issues at top level
 
-  return (
-    <Router>
-      <Header adminInfo={adminInfo} setAdminInfo={setAdminInfo} />
-      <div className="layout d-flex">
-        <div className="content flex-grow-1">
-          <Routes>
-            <Route
-              path="/login"
-              element={<Login setAdminInfo={setAdminInfo} />}
-            />
-            <Route
-              path="/"
-              element={<Dashboard adminInfo={adminInfo} issues={issues} setIssues={setIssues} />}
-            />
-            <Route
-              path="/issue/:id"
-              element={<IssueDetail issues={issues} />}
-            />
-          </Routes>
-        </div>
-      </div>
-    </Router>
-  );
-}
+//   return (
+//     <Router>
+//       <Header adminInfo={adminInfo} setAdminInfo={setAdminInfo} />
+//       <div className="layout d-flex">
+//         <div className="content flex-grow-1">
+//           <Routes>
+//             <Route
+//               path="/login"
+//               element={<Login setAdminInfo={setAdminInfo} />}
+//             />
+//             <Route
+//               path="/"
+//               element={<Dashboard adminInfo={adminInfo} issues={issues} setIssues={setIssues} />}
+//             />
+//             <Route
+//               path="/issue/:id"
+//               element={<IssueDetail issues={issues} />}
+//             />
+//           </Routes>
+//         </div>
+//       </div>
+//     </Router>
+//   );
+// }
 
-export default App;
+// export default App;
 
 // import React, { useState, useEffect } from "react";
 // import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
@@ -94,3 +94,21 @@ export default App;
 
 // export default App;
 
+
+
+
+function App() {
+  const [adminInfo, setAdminInfo] = useState(null); const [issues, setIssues] = useState([]); // keep issues at top level 
+  return (<Router>
+    <Header adminInfo={adminInfo} setAdminInfo={setAdminInfo} />
+    <div className="layout d-flex">
+      <div className="content flex-grow-1">
+        <Routes>
+          <Route path="/login" element={<Login setAdminInfo={setAdminInfo} />} />
+          <Route path="/" element={<Dashboard adminInfo={adminInfo} issues={issues} setIssues={setIssues} />} />
+          <Route path="/issue/:id" element={<IssueDetail issues={issues} />} />
+        </Routes>
+      </div>
+    </div>
+  </Router>);
+} export default App;
