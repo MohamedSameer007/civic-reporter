@@ -66,7 +66,7 @@
   background-color: #34495e;
   width: 50%;
   /* background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(./login.png); */
-  background-image: url(./login1.png);
+  background-image: url(/login1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,7 +78,7 @@
   align-items: center;
   width: 50%;
   height: 90.5vh;
-  background-image:url(./login3.png);
+  background-image:url(/login3.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
