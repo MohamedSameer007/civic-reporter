@@ -3,51 +3,6 @@ import React, { useEffect } from "react";
 import IssueTable from "../components/IssueTable";
 import { useNavigate } from "react-router-dom";
 
-// Example sample data
-// const sampleIssues = [
-//   {
-//     id: 1,
-//     state: "Tamil Nadu",
-//     district: "Tiruvarur",
-//     title: "Large pothole on Main Street",
-//     category: "Infrastructure",
-//     description: "A deep pothole causing heavy traffic and accidents in the area.",
-//     status: "open",
-//     location: "123 Main Street",
-//     reporter: "Sarah Johnson",
-//     priority: "high",
-//     dateReported: "1/15/2024",
-//     image: "/large pothole.jpeg"
-//   },
-//   {
-//     id: 2,
-//     state: "Tamil Nadu",
-//     district: "Chennai",
-//     title: "Broken streetlight",
-//     category: "Utilities",
-//     description: "Streetlight at Central Park entrance is broken, creating safety issues at night.",
-//     status: "in progress",
-//     location: "Central Park Main Entrance",
-//     reporter: "David Martinez",
-//     priority: "medium",
-//     dateReported: "1/20/2024",
-//     image: "/large pothole.jpeg"
-//   },
-//   {
-//     id: 3,
-//     state: "Tamil Nadu",
-//     district: "Tiruvarur",
-//     title: "Park Bench Vandalism",
-//     category: "Parks & Recreation",
-//     description: "Several benches in the downtown park have been vandalized and need repair.",
-//     status: "resolved",
-//     location: "Downtown Park",
-//     reporter: "Mike Davis",
-//     priority: "low",
-//     dateReported: "1/12/2024",
-//     image: "/park bench.webp"
-//   },
-// ];
 const sampleIssues = [
   {
     id: 1,

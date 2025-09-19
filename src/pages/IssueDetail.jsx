@@ -30,8 +30,6 @@ function IssueDetail({ issues, onUpdateIssue }) {
     }
   };
 
-
-
   const handleDownloadReport = () => {
     const doc = new jsPDF();
 

@@ -10,22 +10,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif !important;
 }
-/* .issue-detail{
-  background-color: #bdc3c7;
-  width: 100% !important;
-  min-height: 100vh !important;
-}
-/*
-.issue-detail .image-inside{
-  position: absolute;
-  top: 63px;
-  left: 0;
-  width: 100%;
-  height: 125%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
 .header{
   padding: 12px;
 }
@@ -33,20 +17,6 @@
   width: 30px;
   margin-right: 5px;
 }
-
-
-/* .full-card{
-  border-radius: 600px !important;
-  background-color: green !important;
-}
-.card{
-  background-color: green;
-  border-radius: 20px; 
-} */
-
-
-
-
 .login{
   width: 100%;
   min-height: 90.9vh;
@@ -135,15 +105,6 @@
   background-repeat: no-repeat;
 }
 
-
-
-/* .issue-detail .image-inside img{
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
-
-} */
-
 .issue-detail .full-card{
   width: 490px !important;
 }
@@ -188,8 +149,6 @@ select{
 }
 .modal{
   width:100%;
-}
-.modal-content{
 }
 .modal-dialog{
   max-width: 750px !important;
