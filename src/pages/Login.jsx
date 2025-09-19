@@ -10,6 +10,28 @@ function Login({ setAdminInfo }) {
 
   const states = ["Tamil Nadu", "Kerala", "Karnataka"];
 
+
+  const demoAccounts = [
+    {
+      label: "Municipal Admin",
+      username: "admin_muni",
+      password: "12345",
+      state: "Tamil Nadu",
+      district: "Chennai",
+      department: "Municipal Corporation",
+    },
+    {
+      label: "EB Admin",
+      username: "admin_eb",
+      password: "12345",
+      state: "Tamil Nadu",
+      district: "Tiruvarur",
+      department: "Electricity Board (EB)",
+    },
+  ];
+
+
+
   const districts =
     state === "Tamil Nadu"
       ? ["Chennai", "Tiruvarur"]
@@ -32,24 +54,7 @@ function Login({ setAdminInfo }) {
 
   const navigate = useNavigate();
 
-  //   const handleSubmit = (e) => {
-  //   e.preventDefault();
 
-  //   if (username && password && state && district && department) {
-  //     const adminData = { username, state, district, department };
-
-  //     // update state
-  //     setAdminInfo(adminData);
-
-  //     // save to localStorage
-  //     localStorage.setItem("adminInfo", JSON.stringify(adminData));
-
-  //     // navigate
-  //     navigate("/");
-  //   } else {
-  //     alert("Please fill all fields");
-  //   }
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault(); if (username && password && state && district && department) { // send all info to Dashboard 
@@ -164,10 +169,57 @@ function Login({ setAdminInfo }) {
             </div>
           </form>
         </div>
+        {/* Demo Accounts Section */}
+        <div className="form-demo">
+          <h5 className="mb-2">Demo Accounts</h5>
+          {demoAccounts.map((demo, index) => (
+            <div
+              key={index}
+              className="d-flex justify-content-between align-items-center mb-2 p-2 border rounded"
+            >
+              <span>{demo.label}</span>
+              <button
+                type="button"
+                className="btn btn-outline-primary btn-sm ms-3"
+                onClick={() => {
+                  setUsername(demo.username);
+                  setPassword(demo.password);
+                  setState(demo.state);
+                  setDistrict(demo.district);
+                  setDepartment(demo.department);
+                }}
+              >
+                Use
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
-
     </div>
   );
 }
 
 export default Login;
+
+
+
+
+
+//   const handleSubmit = (e) => {
+//   e.preventDefault();
+
+//   if (username && password && state && district && department) {
+//     const adminData = { username, state, district, department };
+
+//     // update state
+//     setAdminInfo(adminData);
+
+//     // save to localStorage
+//     localStorage.setItem("adminInfo", JSON.stringify(adminData));
+
+//     // navigate
+//     navigate("/");
+//   } else {
+//     alert("Please fill all fields");
+//   }
+// };
